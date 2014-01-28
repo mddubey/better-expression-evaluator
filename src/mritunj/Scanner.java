@@ -21,4 +21,8 @@ public class Scanner {
     private boolean isWhileSpace() {
         return this.text.charAt(index) == ' ';
     }
+
+    public boolean hasNext() {
+        return this.text.length() > index + 1;
+    }
 }

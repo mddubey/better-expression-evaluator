@@ -44,4 +44,19 @@ public class ScannerTest {
         Assert.assertEquals('b', sc.next());
         Assert.assertEquals('a', sc.next());
     }
+
+    @Test
+    public void testTellsThatNextCharacterIsPresentInText() throws Exception{
+        Scanner sc = new Scanner("a");
+
+        Assert.assertEquals(true,sc.hasNext());
+    }
+
+    @Test
+    public void testTellsThatNextCharacterIsNotPresentInText() throws Exception{
+        Scanner sc = new Scanner("a");
+
+        sc.next();
+        Assert.assertEquals(false,sc.hasNext());
+    }
 }
